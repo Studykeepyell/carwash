@@ -1,7 +1,18 @@
-// Where booking requests are sent. Change this to the business inbox.
-const BOOKING_EMAIL = "info@example.com";
+// Business inbox for booking requests and partner enquiries, e.g. "info@yourdomain.ca".
+// While this is empty the site shows "Call to book" instead of the email form.
+const BOOKING_EMAIL = "";
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+if (BOOKING_EMAIL) {
+  document.querySelectorAll("[data-needs-email]").forEach((el) => { el.hidden = false; });
+  document.querySelectorAll("[data-no-email]").forEach((el) => { el.hidden = true; });
+  document.querySelectorAll("[data-email-link]").forEach((link) => {
+    const subject = link.dataset.subject ? `?subject=${encodeURIComponent(link.dataset.subject)}` : "";
+    link.href = `mailto:${BOOKING_EMAIL}${subject}`;
+    if ("emailText" in link.dataset) link.textContent = BOOKING_EMAIL;
+  });
+}
 
 // "Book Essential" / "Book Premium" / "Get a quote" buttons pre-select the package.
 const packageSelect = document.getElementById("package");

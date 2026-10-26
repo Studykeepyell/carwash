@@ -23,7 +23,7 @@ A custom domain such as `eagleson650.ca` (about $15–25 a year) looks more prof
 
 ## Before going live
 
-- [ ] **Email:** replace `info@example.com` in `docs/index.html` (2 places) and `docs/main.js` (1 place).
+- [ ] **Email:** set `BOOKING_EMAIL` at the top of `docs/main.js`. While it's empty, the site shows "Call to book" instead of the booking form and hides the email links.
 - [ ] **Phone:** confirm `(343) 777-9666`. It came from a public directory listing for this location.
 - [ ] **Name:** Google Maps currently lists the site as *Eagleson 650 Coin Wash*, and this website uses *Eagleson 650 Car Wash & Detailing*. Google requires the listing name to match the real-world signage, so pick one name and use it everywhere.
 - [ ] **Packages and prices:** the two tiers, add-ons and prices are a proposal. Local mobile detailers charge roughly $89–$200 for a basic or full detail. Edit the `#detailing` section in `index.html` and the prices in the structured data at the top.

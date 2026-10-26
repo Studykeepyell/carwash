@@ -15,6 +15,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: 72px; -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
@@ -205,6 +206,8 @@ p { margin: 0 0 1em; }
 }
 .form input:focus, .form select:focus, .form textarea:focus { outline: 3px solid rgba(242,179,61,.45); border-color: #c98d17; }
 .form__error { color: #b42318; font-weight: 600; margin: 0; }
+.callbook { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+.callbook p { color: var(--muted); }
 
 /* Visit */
 .visit { display: grid; gap: 28px; }
